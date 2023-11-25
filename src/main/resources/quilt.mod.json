@@ -1,40 +1,41 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "cafe.ferret",
+		"id": "ballmod",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "BallMod",
+			"description": "The companion mod for CivCubed",
 			"contributors": {
-				"Your name here": "Owner"
+				"pontaoski": "CivCubed creator",
+				"mazziechai": "Developer"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://civcubed.net/",
+				"issues": "https://github.com/BlueMoonVineyard/BallMod/issues",
+				"sources": "https://github.com/BlueMoonVineyard/BallMod"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/ballmod/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": "cafe.ferret.ballmod.BallMod"
 		},
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.19.1"
+				"versions": ">=0.21.0"
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=7.0.2"
+				"versions": ">=7.4.0"
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.20"
+				"versions": "=1.20.1"
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "ballmod.mixins.json"
 }
