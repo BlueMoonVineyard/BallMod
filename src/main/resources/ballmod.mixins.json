@@ -3,10 +3,7 @@
   "minVersion": "0.8",
   "package": "cafe.ferret.ballmod.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": [],
-  "client": [
-    "TitleScreenMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

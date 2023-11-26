@@ -20,7 +20,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "cafe.ferret.ballmod.BallMod"
+			"client_init": "cafe.ferret.ballmod.BallMod"
 		},
 		"depends": [
 			{
