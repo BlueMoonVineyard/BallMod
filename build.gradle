@@ -16,6 +16,10 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
 }
 
 loom {
@@ -32,6 +36,8 @@ loom {
 	}
 }
 
+def emi_version = "1.0.28+1.20.1"
+
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
 // See https://docs.gradle.org/current/userguide/platforms.html for information on how version catalogs work.
 dependencies {
@@ -45,6 +51,10 @@ dependencies {
 	}
 	*/
 	modImplementation libs.quilt.loader
+
+	// Fabric
+	modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
+	modCompileOnly "dev.emi:emi-fabric:${emi_version}"
 
 	// QSL is not a complete API; You will need Quilted Fabric API to fill in the gaps.
 	// Quilted Fabric API will automatically pull in the correct QSL version.

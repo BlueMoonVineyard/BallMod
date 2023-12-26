@@ -16,6 +16,13 @@ import org.slf4j.LoggerFactory;
 public class BallMod implements ClientModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("BallMod");
 	public static final String MOD_ID = "ballmod";
+	public static BallMod instance;
+	public RecipeReceiver receiver = null;
+
+	public BallMod() throws Throwable {
+		LOGGER.error("Creating BallMod...");
+		BallMod.instance = this;
+	}
 
 	public static Identifier id(String key) {
 		return new Identifier(MOD_ID, key);
@@ -23,9 +30,12 @@ public class BallMod implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient(ModContainer mod) {
-		LOGGER.info("Registering armor texture providers");
+		LOGGER.error("Registering armor texture providers");
 		CustomArmorRendering.register();
 
-		LOGGER.info("All done!");
+		LOGGER.error("Creating recipe receiver");
+		receiver = new RecipeReceiver(LOGGER);
+
+		LOGGER.error("All done!");
 	}
 }
